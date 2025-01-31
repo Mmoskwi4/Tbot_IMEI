@@ -1,0 +1,188 @@
+[
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "aiohttp",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "tzlocal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tzlocal",
+        "description": "tzlocal",
+        "detail": "tzlocal",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN_BOT",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "IMEI_API",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ClientConnectorError",
+        "importPath": "aiohttp.client_exceptions",
+        "description": "aiohttp.client_exceptions",
+        "isExtraImport": true,
+        "detail": "aiohttp.client_exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Dispatcher",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "MemoryStorage",
+        "importPath": "aiogram.fsm.storage.memory",
+        "description": "aiogram.fsm.storage.memory",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.storage.memory",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "StatesGroup",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "importPath": "aiogram.filters",
+        "description": "aiogram.filters",
+        "isExtraImport": true,
+        "detail": "aiogram.filters",
+        "documentation": {}
+    },
+    {
+        "label": "CommandStart",
+        "importPath": "aiogram.filters",
+        "description": "aiogram.filters",
+        "isExtraImport": true,
+        "detail": "aiogram.filters",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "kind": 6,
+        "importPath": "bot.bot",
+        "description": "bot.bot",
+        "peekOfCode": "class Form(StatesGroup):\n    waiting_for_imei = State()\n# IMEI информация\nasync def imei_info(device_info: dict) -> str:\n    if device_info is not None:\n        response = (\n            f\"🔍 **Информация об устройстве с IMEI {device_info['imei'] if device_info.get('imei') != None else 'Не указано'}**:\\n\"\n            f\"📱 **Название устройства**: {device_info['deviceName'] if device_info.get('deviceName') != None else 'Не указано'}\\n\"\n            f\"🌍 **Страна покупки**: {device_info['purchaseCountry'] if device_info.get('purchaseCountry') != None else 'Не указано'}\\n\"\n            f\"🗓️ **Дата покупки**: {datetime.fromtimestamp(device_info['estPurchaseDate'], local_timezone).strftime('%Y-%m-%d %H:%M:%S') if device_info.get('estPurchaseDate') != None else 'Не указано'}\\n\"",
+        "detail": "bot.bot",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "bot.bot",
+        "description": "bot.bot",
+        "peekOfCode": "bot = Bot(str(TOKEN_BOT))\nstorage = MemoryStorage()\ndp = Dispatcher(storage=storage)\nlocal_timezone = tzlocal.get_localzone()\n# Определение состояний\nclass Form(StatesGroup):\n    waiting_for_imei = State()\n# IMEI информация\nasync def imei_info(device_info: dict) -> str:\n    if device_info is not None:",
+        "detail": "bot.bot",
+        "documentation": {}
+    },
+    {
+        "label": "storage",
+        "kind": 5,
+        "importPath": "bot.bot",
+        "description": "bot.bot",
+        "peekOfCode": "storage = MemoryStorage()\ndp = Dispatcher(storage=storage)\nlocal_timezone = tzlocal.get_localzone()\n# Определение состояний\nclass Form(StatesGroup):\n    waiting_for_imei = State()\n# IMEI информация\nasync def imei_info(device_info: dict) -> str:\n    if device_info is not None:\n        response = (",
+        "detail": "bot.bot",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "kind": 5,
+        "importPath": "bot.bot",
+        "description": "bot.bot",
+        "peekOfCode": "dp = Dispatcher(storage=storage)\nlocal_timezone = tzlocal.get_localzone()\n# Определение состояний\nclass Form(StatesGroup):\n    waiting_for_imei = State()\n# IMEI информация\nasync def imei_info(device_info: dict) -> str:\n    if device_info is not None:\n        response = (\n            f\"🔍 **Информация об устройстве с IMEI {device_info['imei'] if device_info.get('imei') != None else 'Не указано'}**:\\n\"",
+        "detail": "bot.bot",
+        "documentation": {}
+    },
+    {
+        "label": "local_timezone",
+        "kind": 5,
+        "importPath": "bot.bot",
+        "description": "bot.bot",
+        "peekOfCode": "local_timezone = tzlocal.get_localzone()\n# Определение состояний\nclass Form(StatesGroup):\n    waiting_for_imei = State()\n# IMEI информация\nasync def imei_info(device_info: dict) -> str:\n    if device_info is not None:\n        response = (\n            f\"🔍 **Информация об устройстве с IMEI {device_info['imei'] if device_info.get('imei') != None else 'Не указано'}**:\\n\"\n            f\"📱 **Название устройства**: {device_info['deviceName'] if device_info.get('deviceName') != None else 'Не указано'}\\n\"",
+        "detail": "bot.bot",
+        "documentation": {}
+    }
+]
